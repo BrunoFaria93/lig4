@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lig 4 - Equipe Rocket</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="assets/css/images/pokemon_go_play_game_cinema_film_movie_icon-icons.com_69163 (1).ico" type="image/x-icon">
+</head>
+<body>
+<section id="win">
+    <h2 id="result"></h2>
+</section>
+
+<section id="scoreBoard" class="score">
+    <h3 class="score1"> <span id="score__scoreOne" class="score__span">0</span></h3> <h3 class="score2"> <span id="score__scoreTwo" class="score__span">0</span></h3> 
+</section>
+
+    <main class="main">
+        <!--Minha ideia é gerar o jogo dentro dessa section a partir do botão-->
+        <section class="main__container">
+        </section>
+       
+        <audio src="assets/css/images/Sound Effects - Pokémon Anime (7) Pokémon Out.mp3" id='pokeball_sound'></audio>
+        <audio src="assets/css/images/y2meta.com - Pokémon Theme (8 Bit Remix Cover Version) [Tribute to Pokémon] - 8 Bit Universe (128 kbps).mp3" id='musica_fundo'></audio>
+        <audio src="assets/css/images/WIN A BATTLE POKEMON - SOUND EFFECT.mp3" id='musica_vitoria'></audio>
+        <audio src="assets/css/images/Pokemon (A Button) - Sound Effect (HD).mp3" id='audio_menu'></audio>
+    </main>
+    <section id="pokeballCurrent" class="pokeball"></section>
+    <div id='reset'></div>
+    <script src="script.js"></script>
+</body>
+</html>

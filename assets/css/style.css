@@ -1,0 +1,651 @@
+@font-face {
+    font-family: 'Free Pixel';
+    src: url('/assets/fonts/FreePixel.ttf');
+}
+
+@font-face {
+    font-family: 'Pokemon Hollow';
+    src: url('/assets/fonts/PokemonHollow.ttf');
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Free Pixel', Arial, Helvetica, sans-serif;
+    background-color: #FFF;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.body__background {
+    background-color: #424242;
+    background-image: url(./images/r.png);
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position-x: 50%;
+    background-position-y: 50%;
+}
+
+.header {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+.sectionWin{
+    display: flex;
+    justify-content: center;
+    background-color:#e71d36;
+    color: #588b8b;
+
+}
+
+#win {
+    height: 20px;
+    width: 300px;
+}
+
+#result {
+    display: none;
+    background: rgba(128, 128, 128, 0.493);
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.5rem;
+    justify-content: center;
+    text-shadow: -1px -1px 0 #01FF70, 
+                  1px -1px 0 #01FF70,
+                 -1px  1px 0 #01FF70,
+                  1px  1px 0 #01FF70;
+    text-align: center;
+                  
+}
+
+.score {
+    height: 50px;
+    width: 300px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.score__span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 4px;
+    font-size: 1.1rem;
+}
+
+.score1 {
+background-color: #f5193a77;
+color: #FFF;
+border: 1px solid #f51939;
+text-align: center;
+border-radius: 20px;
+width: 100px;
+font-weight: bold;
+padding: 05px
+
+}
+
+.score2{
+border: 1px solid black;
+background-color: rgba(0, 0, 0, 0.404);
+color: #FFF;
+text-align: center;
+border-radius: 20px;
+width: 100px;
+font-weight: bold;
+padding: 05px
+
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 329px;
+}
+
+/* Estilização do Menu - Início */
+.menu-game {
+    font-family: 'Free Pixel', Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-game__title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.menu-game__img {
+    width: 80%;
+    font-family: 'Pokemon Hollow';
+}
+
+.menu-game__button-nest {
+    display: flex; 
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 80%; 
+}
+
+.menu-game__titleH2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.menu-game__paragraph {
+    font-size: 1.2rem;
+}
+
+.menu__button {
+    border: none;
+    font-family: 'Free Pixel';
+    padding: 5px;
+    font-size: 1.1rem;
+    color: #FFF;
+    background-color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 1px 3px black;
+    margin: 20px;
+}
+
+.menu__button:hover {
+    background-color: #FFF;
+    color: #000;
+    transition: .5s;
+}
+
+.menu__button:not(:hover) {
+    transition: .5s;
+}
+
+#button1 {
+    animation: hoverButton 0.9s infinite;
+    
+}
+
+.menu__input {
+    border: 2px solid #000;
+    font-family: 'Free Pixel', Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.menu__input::placeholder {
+    color: black;
+}
+
+.menu__input:focus::placeholder {
+    opacity: 0;
+    transform: translateX(5px);
+    transition: .5s;
+}
+
+#player1:focus {
+    outline: 2px solid #3c5aa6;
+    border: 2px solid  #3c5aa6;
+}
+
+#player2:focus {
+    outline: 2px solid #ffcb05;
+    border: 2px solid #ffcb05;
+}
+
+.menu-game__form {
+height: 80px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+margin-top: 20px;
+}
+
+.instructions__div {
+    text-align: center;
+}
+
+.instructions__tittle {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    border-bottom: 1px solid black;
+    padding-bottom: 12px;
+    line-height: 40px;
+}
+
+.instructions__item {
+    margin-bottom: 5px;
+    padding: 12px;
+    font-size: 1.08rem;
+    border: 1px dashed #808080;
+    background-color: #f0fff0;
+}
+
+/* Estilização do Menu - Fim */
+.linha {
+    display: flex;
+}
+
+.linha__bloco {
+    width: 45px;
+    height: 45px;
+    border: 1px solid blue;
+}
+
+.pokeball {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.pokeballPlayer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.current-pokeball {
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+.pokeballPlayer p {
+    color: white;
+        margin-top: 0px;
+        font-weight: bold;
+        font-size: 1.3rem;
+        text-shadow: -1px -1px 0 #f5193a, 
+                  1px -1px 0 #f5193a,
+                 -1px  1px 0 #f5193a,
+                  1px  1px 0 #f5193a;
+}
+
+#pokeballStart {
+    height: 200px;
+    width: 200px;
+    border: 13px solid #242633;
+    border-radius: 50%;
+    background-image: linear-gradient(
+        #f51939 100px,
+        white 100px
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: float 1.5s infinite;
+}
+
+
+#pokeballStart:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 200px;
+    background-color: #242633;
+    top: 95.5px;
+}
+
+#generateGame{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 13px double #242633;
+    z-index: 2;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+#generateGame:hover{
+    color: white;
+    transition: .5s;
+    animation: blinking-show .5s infinite;
+    cursor: pointer;
+}
+
+#generateGame:not(:hover) {
+    transition: .5s;
+    
+}
+
+#bloco0-0:hover{
+    cursor: pointer;
+    background-color: #f5193ad2;
+}
+
+#bloco0-1:hover{
+    cursor: pointer;
+    background-color: #f5193ad2;
+}
+
+#bloco0-2:hover{
+    cursor: pointer;
+    background-color: #f5193ad2;
+}
+
+#bloco0-3:hover{
+    cursor: pointer;
+    background-color: #f5193ad2;
+}
+
+#bloco0-4:hover{
+    cursor: pointer;
+    background-color: #f5193ad2;
+}
+
+#bloco0-5:hover{
+    cursor: pointer;
+    background-color: #f5193ad2;
+}
+
+#bloco0-6:hover{
+    cursor: pointer;
+    background-color: #f5193ad2;
+}
+
+.blink_me {
+    animation: blinker 2.5s linear;
+}
+
+#reset {
+    width: 100px;
+    height: 50px;
+}
+
+#reset__button {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: 2px double #f5193a;
+    border-radius: 7px;
+    font-family: 'Free Pixel';
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 
+   -1px -1px 0 #f5193a, 
+    1px -1px 0 #f5193a,
+   -1px  1px 0 #f5193a,
+    1px  1px 0 #f5193a;
+}
+
+#reset__button:hover {
+    background-color: #f5193a;
+    transition: .5s;
+}
+
+#reset__button:not(:hover) {
+    transition: .5s;
+} 
+
+.rollout__animation{
+    width: 45px;
+    height: 45px;
+    background-image: url(images/pokeball-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 45px 45px;
+    animation: pokeball__rollout 1s;
+    border: 0.5px solid blue;
+}
+.rollout__animation2{
+    width: 45px;
+    height: 45px;
+    background-image: url(images/ultraball-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 45px 45px;
+    animation: pokeball__rollout 1s;
+    border: 0.5px solid blue;
+}
+
+.colorWinner{
+    animation: colorOpacity 4s infinite;
+
+}
+
+@keyframes blinker {
+    100% {
+      opacity: 0;
+    }
+}
+    
+@keyframes blinking-show {
+    0% {
+        background-color: rgb(224, 153, 153);
+        color: #FFF;
+    }
+
+    50% {
+        background-color: #FFF;
+        color: #000;
+    }
+
+    100% {
+        background-color: rgb(224, 153, 153);
+        color: #FFF;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(10px);
+    }
+    
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+
+
+@keyframes rising {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pokeball__rollout {
+    0% {
+        transform: translateY(-245px);
+        border: 1px solid rgba(0, 0, 255, 0);
+    }
+
+    100% {
+        transform: translateY(5px);
+        border: 1px solid rgba(0, 0, 255, 0);
+    }
+}
+
+@keyframes colorOpacity {
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes hoverButton {
+    
+    0%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .main__container {
+        width: 500px;
+    }
+
+    .menu-game__img {
+        width: 400px;
+    }
+
+    .menu-game__title {
+        font-size: 6.5rem;
+    }
+
+    .menu-game__paragraph{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .menu-game__titleH2 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .menu__input {
+        width: 250px;
+        padding: 8px;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+
+    .menu__button {
+        cursor: pointer;
+        padding: 15px;
+        font-size: 1.5rem;
+    }
+
+    .instructions__tittle {
+        font-size: 4rem;
+        margin-bottom: 10px;
+    }
+    
+    .instructions__item {
+        font-size: 1.6rem;  
+    }
+
+    #win {
+        height: 30px;
+        width: 430px;
+        text-align: center;
+    }
+
+    #result {
+        font-size: 1.8rem;
+        padding: 5px;
+        border-radius: 7px;
+    }
+
+    .score {
+        height: 80px;
+        width: 500px;
+        justify-content: space-between;
+        font-size: 1.5rem;
+    }
+
+    .score__span {
+        font-size: 1.5rem;
+    }
+
+    .score1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+    }
+
+    .score2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+    }
+
+    .blink_me {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .linha__bloco {
+        width: 80px;
+        height: 80px;
+    }
+
+    .rollout__animation {
+        width: 80px;
+        height: 80px;
+        background-size: 80px 80px;
+    }
+
+    .rollout__animation2 {
+        width: 80px;
+        height: 80px;
+        background-size: 80px 80px;
+    }
+
+    .current-pokeball {
+        width: 50px;
+    }
+
+    .pokeballPlayer p {
+        font-size: 2rem;
+    }
+
+    #reset__button {
+        font-size: 1.5rem;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+
+
+    
+
+
+
